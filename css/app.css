@@ -1,0 +1,44 @@
+body {
+  color: black;
+  background-color: #b3cccc;
+  font-family: 'Raleway', sans-serif;
+}
+
+input {
+  background-color: white;
+  width: 150px;
+  height: 20px;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
+.result-item {
+  background-color: #d1e0e0;
+  border-radius: 7px;
+  padding: 15px;
+  margin: 10px 0px 10px 0px;
+  box-shadow: 1px 1px #a3c2c2;
+}
+
+.result-item img {
+  padding: 0px 10px 0px 0px;
+}
+
+.result-item span p {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 13px;
+  font-size: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.result-item p {
+  font-size: 15px;
+}
+
+.result-item a {
+  cursor: pointer;
+}

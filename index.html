@@ -1,0 +1,53 @@
+<html>
+
+  <head>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js">
+    </script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-sanitize.js">
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet" />
+  </head>
+
+  <body ng-app="Slated">
+
+    <div ng-controller="Controller">
+
+      <input type="text"
+             ng-change="type()"
+             ng-model="myValue"
+             ng-model-options='{ debounce: 1000 }'
+             placeholder="Search Projects"
+             compile-html="result"/>
+
+      <div class="result-item" ng-repeat="result in results">
+        <div>
+          <span ng-bind-html="result.image_code"></span>
+
+          <span>
+            <p> {{ result.value }} </p>
+          </span>
+        </div>
+
+        <p> {{ result.description }}</p>
+        <p> {{ result.year }}</p>
+        <p>
+          Visit Project: <a ng-href="http://slated.com/films/{{ result.id }}">
+                          {{ result.label }}
+                         <a>
+        </p>
+
+      </div>
+
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers/Controller.js"></script>
+    <script src="js/services/search.js"></script>
+
+  </body>
+
+</html>
